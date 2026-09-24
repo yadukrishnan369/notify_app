@@ -31,12 +31,16 @@ class _NotificationScreenState extends State<NotificationScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final String pageTitle =
+        ModalRoute.of(context)?.settings.arguments as String? ??
+        'Notifications';
     return Scaffold(
       backgroundColor: Colors.white,
       body: SafeArea(
         child: Column(
           children: [
-            const NotificationHeader(),
+            // Notification Header section
+            NotificationHeader(title: pageTitle),
 
             // Listens to Provider and displays UI based on the current state
             Expanded(

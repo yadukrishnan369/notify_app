@@ -34,8 +34,14 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
+
+  # State management for managing notification loading, data, and error states
   provider: ^6.1.5+1
+
+  # Used to make HTTP requests and fetch notification data from the remote API
   http: ^1.6.0
+
+  # Used to display SVG icons and assets in the application
   flutter_svg: ^2.3.0
 
 dev_dependencies:
@@ -60,11 +66,15 @@ flutter:
   # the material Icons class.
   uses-material-design: true
 
+  # Local assets used for icons and images in the application
   assets:
     - assets/icons/
     - assets/images/
 
+  # Custom fonts used throughout the application
   fonts:
+
+    # Quicksand font family with different font weights
     - family: Quicksand
       fonts:
         - asset: assets/fonts/Quicksand-Light.ttf
@@ -77,6 +87,8 @@ flutter:
           weight: 600
         - asset: assets/fonts/Quicksand-Bold.ttf
           weight: 700
+          
+    # Poppins font family with different font weights
     - family: Poppins
       fonts:
         - asset: assets/fonts/Poppins-Regular.ttf

@@ -84,7 +84,11 @@ class HomeSearchSection extends StatelessWidget {
                 // Opens the Notifications screen
                 InkWell(
                   onTap: () {
-                    Navigator.pushNamed(context, AppRoutes.notifications);
+                    Navigator.pushNamed(
+                      context,
+                      AppRoutes.notifications,
+                      arguments: 'Notifications',
+                    );
                   },
                   child: SvgPicture.asset(
                     'assets/icons/notification.svg',

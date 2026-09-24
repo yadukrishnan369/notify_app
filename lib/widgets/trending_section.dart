@@ -44,53 +44,53 @@ class TrendingSection extends StatelessWidget {
 
         const SizedBox(height: 12),
 
-        // First row of trending stores
-        SizedBox(
-          height: 90,
-          child: ListView.separated(
-            scrollDirection: Axis.horizontal,
-            padding: const EdgeInsets.symmetric(horizontal: 20),
-            itemCount: 4,
-            separatorBuilder: (context, index) {
-              return const SizedBox(width: 10);
-            },
-            itemBuilder: (context, index) {
-              return const TrendingCard(
-                imagePath: 'assets/images/trending_icecream.png',
-                shopName: 'Mithas Bhandar',
-                category: 'Sweets, North Indian',
-                location: '(store location)',
-                distance: '6.4 kms',
-                rating: '4.1',
-                deliveryTime: '45 mins',
-              );
-            },
-          ),
-        ),
+        // scroll horizontally
+        SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          padding: const EdgeInsets.symmetric(horizontal: 20),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              // First row
+              Row(
+                children: List.generate(
+                  4,
+                  (index) => const Padding(
+                    padding: EdgeInsets.only(right: 10),
+                    child: TrendingCard(
+                      imagePath: 'assets/images/trending_icecream.png',
+                      shopName: 'Mithas Bhandar',
+                      category: 'Sweets, North Indian',
+                      location: '(store location)',
+                      distance: '6.4 kms',
+                      rating: '4.1',
+                      deliveryTime: '45 mins',
+                    ),
+                  ),
+                ),
+              ),
 
-        const SizedBox(height: 14),
+              const SizedBox(height: 14),
 
-        // Second row of trending stores
-        SizedBox(
-          height: 90,
-          child: ListView.separated(
-            scrollDirection: Axis.horizontal,
-            padding: const EdgeInsets.symmetric(horizontal: 20),
-            itemCount: 4,
-            separatorBuilder: (context, index) {
-              return const SizedBox(width: 10);
-            },
-            itemBuilder: (context, index) {
-              return const TrendingCard(
-                imagePath: 'assets/images/trending_icecream.png',
-                shopName: 'Mithas Bhandar',
-                category: 'Sweets, North Indian',
-                location: '(store location)',
-                distance: '6.4 kms',
-                rating: '4.1',
-                deliveryTime: '45 mins',
-              );
-            },
+              // Second row
+              Row(
+                children: List.generate(
+                  4,
+                  (index) => const Padding(
+                    padding: EdgeInsets.only(right: 10),
+                    child: TrendingCard(
+                      imagePath: 'assets/images/trending_icecream.png',
+                      shopName: 'Mithas Bhandar',
+                      category: 'Sweets, North Indian',
+                      location: '(store location)',
+                      distance: '6.4 kms',
+                      rating: '4.1',
+                      deliveryTime: '45 mins',
+                    ),
+                  ),
+                ),
+              ),
+            ],
           ),
         ),
 

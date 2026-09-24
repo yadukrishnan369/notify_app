@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 
 // Notifications screen header
 class NotificationHeader extends StatelessWidget {
-  const NotificationHeader({super.key});
+  const NotificationHeader({super.key, required this.title});
+
+  final String title;
 
   @override
   Widget build(BuildContext context) {
@@ -35,8 +37,8 @@ class NotificationHeader extends StatelessWidget {
 
               const SizedBox(width: 18),
               // Title
-              const Text(
-                'Notifications',
+              Text(
+                title,
                 style: TextStyle(
                   fontFamily: 'Quicksand',
                   fontSize: 18,
